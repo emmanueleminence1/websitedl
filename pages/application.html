@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Application Form | Eminence, Web Developer</title>
+  <meta name="description" content="Complete project application form to request a website from Eminence, with clearly labelled fields.">
+  <meta name="author" content="Eminence">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+  <p><a href="#main-content">Skip to main content</a></p>
+
+  <header>
+    <p>Eminence | Web Developer</p>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="application.html" aria-current="page">Start a Project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <h1>Project Application Form</h1>
+    <p>Tell me about your project and I will reply by email. Fields marked <strong>(required)</strong> must be completed.</p>
+    <p><strong>Important:</strong> do not enter passwords, ID numbers, or other private information in this form.</p>
+
+    <form action="mailto:hello@example.com" method="post" enctype="text/plain">
+
+      <fieldset>
+        <legend>Your details</legend>
+
+        <p>
+          <label for="full-name">Full name (required)</label><br>
+          <input type="text" id="full-name" name="full-name" required minlength="2" maxlength="80" autocomplete="name">
+        </p>
+
+        <p>
+          <label for="email">Email address (required)</label><br>
+          <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="email-hint"><br>
+          <small id="email-hint">I will use this address to reply to you.</small>
+        </p>
+
+        <p>
+          <label for="phone">Telephone number (optional)</label><br>
+          <input type="tel" id="phone" name="phone" pattern="\+?[0-9 ]{7,15}" title="Enter 7 to 15 digits, optionally starting with a plus sign" autocomplete="tel" aria-describedby="phone-hint"><br>
+          <small id="phone-hint">Use 7 to 15 digits, for example +2348001234567.</small>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>About your project</legend>
+
+        <p>
+          <label for="service">Service needed (required)</label><br>
+          <select id="service" name="service" required>
+            <option value="">Choose a service</option>
+            <optgroup label="Websites">
+              <option value="business-website">Business website</option>
+              <option value="portfolio-website">Portfolio website</option>
+            </optgroup>
+            <optgroup label="Support">
+              <option value="maintenance">Updates and maintenance</option>
+              <option value="other">Something else</option>
+            </optgroup>
+          </select>
+        </p>
+
+        <fieldset>
+          <legend>When do you need the website? (required)</legend>
+          <p>
+            <input type="radio" id="timeline-month" name="timeline" value="within-one-month" required>
+            <label for="timeline-month">Within one month</label>
+          </p>
+          <p>
+            <input type="radio" id="timeline-quarter" name="timeline" value="within-three-months">
+            <label for="timeline-quarter">Within three months</label>
+          </p>
+          <p>
+            <input type="radio" id="timeline-flexible" name="timeline" value="flexible">
+            <label for="timeline-flexible">I am flexible</label>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Pages you need (choose all that apply)</legend>
+          <p>
+            <input type="checkbox" id="page-home" name="pages" value="home">
+            <label for="page-home">Home</label>
+          </p>
+          <p>
+            <input type="checkbox" id="page-about" name="pages" value="about">
+            <label for="page-about">About</label>
+          </p>
+          <p>
+            <input type="checkbox" id="page-services" name="pages" value="services">
+            <label for="page-services">Services</label>
+          </p>
+          <p>
+            <input type="checkbox" id="page-blog" name="pages" value="blog">
+            <label for="page-blog">Blog</label>
+          </p>
+          <p>
+            <input type="checkbox" id="page-contact" name="pages" value="contact">
+            <label for="page-contact">Contact</label>
+          </p>
+        </fieldset>
+
+        <p>
+          <label for="existing-site">Existing website address (optional)</label><br>
+          <input type="url" id="existing-site" name="existing-site" placeholder="https://example.com">
+        </p>
+
+        <p>
+          <label for="details">Project details (required)</label><br>
+          <textarea id="details" name="details" rows="6" cols="50" required minlength="20" maxlength="1000" aria-describedby="details-hint"></textarea><br>
+          <small id="details-hint">Write between 20 and 1000 characters.</small>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Consent</legend>
+        <p>
+          <input type="checkbox" id="consent" name="consent" value="agreed" required>
+          <label for="consent">I agree that my details may be used to reply to this request (required)</label>
+        </p>
+      </fieldset>
+
+      <p><button type="submit">Send application</button></p>
+    </form>
+
+    <p>Not ready yet? Return to the <a href="../contact.html">contact page</a> or the <a href="../index.html">home page</a>.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Eminence. Built with plain HTML only.</p>
+    <p><a href="mailto:hello@example.com?subject=Website%20enquiry">Email Eminence</a></p>
+  </footer>
+</body>
+</html>
